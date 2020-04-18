@@ -106,7 +106,7 @@ export const ButtonsWrapper = styled.div`
 
 export const Button = styled.button`
   display: block;
-  min-height: 60px;
+  min-height: 30px;
   min-width: 100px;
   margin-right: 20px;
 `;
