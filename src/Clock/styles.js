@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-const clockSize = "600";
-const clockBorderSize = "10";
-const clockCenterSize = "20";
-const clockHandSize = "8";
-const clockTickSize = clockHandSize;
-const clockColor = "white";
-const clockBorderColor = "black";
-const clockHandColor = "black";
-const clockHandSecColor = "red";
-const clockTickColor = "lightgray";
+const clockSize = '600'
+const clockBorderSize = '10'
+const clockCenterSize = '20'
+const clockHandSize = '8'
+const clockTickSize = clockHandSize
+const clockColor = 'white'
+const clockBorderColor = 'black'
+const clockHandColor = 'black'
+const clockHandSecColor = 'red'
+const clockTickColor = 'lightgray'
 
 export const Clock = styled.div`
   position: relative;
@@ -35,7 +35,7 @@ export const Clock = styled.div`
     border-radius: 100%;
     z-index: 99;
   }
-`;
+`
 
 const clockHand = styled.div`
   position: absolute;
@@ -47,24 +47,24 @@ const clockHand = styled.div`
   background-color: ${clockHandColor};
   transform-origin: 0;
   transition: transform cubic-bezier(0.1, 2.5, 0.5, 1);
-`;
+`
 
 export const clockHour = styled(clockHand)`
   width: calc(50% - ${clockSize / 4}px);
   transform: ${props => `rotate(${90 + (360 / 60) * props.deg}deg)`};
-`;
+`
 
 export const clockMinute = styled(clockHand)`
   width: calc(50% - ${clockSize / 6}px);
   transform: ${props => `rotate(${90 + (360 / 60) * props.deg}deg)`};
-`;
+`
 
 export const clockSecond = styled(clockHand)`
   width: calc(50% - ${clockSize / 10}px);
   height: ${clockHandSize / 2}px;
   background-color: ${clockHandSecColor};
   transform: ${props => `rotate(${90 + (360 / 60) * props.deg}deg)`};
-`;
+`
 
 export const clockTick = styled.span`
   display: block;
@@ -79,34 +79,35 @@ export const clockTick = styled.span`
   &:nth-child(${props => props.d}) {
     transform: ${props => `rotate(${180 + 6 * (props.d + 1) - 6}deg)`};
   }
-`;
+`
 
 export const Number = styled.span`
   position: absolute;
   transform: ${props => `rotate(${0 - (props.d + 1) * 6}deg)`};
   font: ${props => {
-    const { isHour, isMin, isSec } = props;
-    if (isHour || isMin || isSec) return "bold 18px sans-serif";
-    return "initial";
-  }};
+    const {isHour, isMin, isSec} = props
+    if (isHour || isMin || isSec) return 'bold 18px sans-serif'
+    return 'initial'
+}};
   color: ${props => {
-    const { isHour, isMin, isSec } = props;
-    if (isHour) return "hotpink";
-    if (isMin) return "green";
-    if (isSec) return "red";
-    return "black";
-  }};
-`;
+    const {isHour, isMin, isSec} = props
+    if (isHour) return 'hotpink'
+    if (isMin) return 'green'
+    if (isSec) return 'red'
+    return 'black'
+}};
+`
 
 export const ButtonsWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-`;
+`
 
 export const Button = styled.button`
+  background-color: #ffffff;
   display: block;
   min-height: 30px;
   min-width: 100px;
   margin-right: 20px;
-`;
+`
