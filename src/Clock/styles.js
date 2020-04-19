@@ -110,4 +110,8 @@ export const Button = styled.button`
   min-height: 30px;
   min-width: 100px;
   margin-right: 20px;
+  border-radius: 50px;
+  background: #c0c5ce;
+  box-shadow:  20px 20px 60px #a3a7af, 
+             -20px -20px 60px #dde3ed;
 `
